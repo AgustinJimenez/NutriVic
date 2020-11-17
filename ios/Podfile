@@ -1,0 +1,18 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '10.0'
+
+target 'app' do
+
+  #REACT-NATIVE-PERMISSIONS-CONFIG-START(DO NOT DELETE)
+    permissions_path = '../node_modules/react-native-permissions/ios'
+    pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse.podspec"
+    pod 'Permission-Notifications', :path => "#{permissions_path}/Notifications.podspec"
+  #REACT-NATIVE-PERMISSIONS-CONFIG-END
+  config = use_native_modules!
+  use_react_native!(:path => config["reactNativePath"])
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+  
+  use_native_modules!
+end
