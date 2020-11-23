@@ -1,12 +1,12 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import { CALLBACK_VOID_SAGA } from '../actions/types'
+import { CALLBACK_VOID_SAGA } from './constants'
 
 function* voidFunction({ actions = [], callback = () => {} }) {
   if (!Array.isArray(actions)) actions = [actions]
-  console.log('callbackVoidSaga ===> ', { actions, callback })
+
   for (let action of actions) yield put(action)
 
-  yield callback()
+  if (typeof callback === 'function') yield call(callback)
 }
 
 export default function* callbackVoidSaga() {

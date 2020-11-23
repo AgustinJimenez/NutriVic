@@ -1,30 +1,26 @@
 import React from 'react'
-import { StyleProvider } from 'native-base'
-import { StatusBar, Linking, Platform } from 'react-native'
-import getTheme from '../theme/components'
-import variables from '../theme/variables/commonColor'
+import { StatusBar, Linking, Platform /* , LogBox  */ } from 'react-native'
 import NavigationProvider from './NavigationProvider'
-import { navigationRef, isReadyRef } from './NavigationProvider/service'
+import { navigationRef } from './NavigationProvider/service'
 import AsyncStorage from '@react-native-community/async-storage'
 import { Provider as ReduxProvider } from 'react-redux'
 import { store, persistor } from '../redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Root } from 'native-base'
-import LoadingScreen from '../screens/ParriOn/AuthLoadingScreen'
+import LoadingScreen from '../screens/AuthLoadingScreen'
 //import NavigationMiddleware from './NavigationScreenMiddleware'
 import './i18n'
 import NetStatusChecker from './NetStatusChecker'
 import { NavigationContainer } from '@react-navigation/native'
 //import { disableYellowBox, ignoreWarnings } from '../../env.json'
 import GlobalFont from 'react-native-global-font'
-let theme = getTheme(variables)
-console.disableYellowBox = true
+//LogBox.ignoreAllLogs()
 
 const App = () => {
   const [isReady, setIsReady] = React.useState(__DEV__ ? false : true)
   const [initialState, setInitialState] = React.useState()
   React.useEffect(() => {
-    GlobalFont.applyGlobal('CircularStd-Book')
+    GlobalFont.applyGlobal('Montserrat')
   }, [])
   React.useEffect(() => {
     const restoreState = async () => {
@@ -64,13 +60,11 @@ const App = () => {
         }
       >
         <PersistGate loading={<LoadingScreen />} persistor={persistor}>
-          <StyleProvider style={theme}>
-            <Root>
-              <StatusBar barStyle="light-content" />
-              <NavigationProvider />
-              <NetStatusChecker />
-            </Root>
-          </StyleProvider>
+          <Root>
+            <StatusBar barStyle="light-content" />
+            <NavigationProvider />
+            <NetStatusChecker />
+          </Root>
         </PersistGate>
       </NavigationContainer>
     </ReduxProvider>

@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import CommonStyles, { colors } from '../../theme/variables/commonStyles'
+import CommonStyles, { colors } from '../../styles'
 
 export default StyleSheet.create({
   labelPadder: {

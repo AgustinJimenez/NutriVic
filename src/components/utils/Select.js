@@ -1,7 +1,7 @@
 import React from 'react'
 import { Platform, TouchableOpacity, Text, FlatList } from 'react-native'
 import { Icon, Picker, View, Item } from 'native-base'
-import { colors, scale } from '../../theme/variables/commonStyles'
+import { colors, scale } from '../../styles'
 import Modal from 'react-native-modal'
 import { useDispatch, useSelector } from 'react-redux'
 import { datasetSelector } from '../../redux/selectors'

@@ -1,5 +1,5 @@
 import { takeLatest, put } from 'redux-saga/effects'
-import { CLEAR_REDUCER_SAGA } from '../actions/types'
+import { CLEAR_REDUCER_SAGA } from './constants'
 import { setDatasetToReducer } from '../redux/actions'
 import datasetInitialState from '../redux/initialState.json'
 function* clearReducers() {
