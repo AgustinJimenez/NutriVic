@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
     marginHorizontal: scale(1),
     marginVertical: scale(0.2),
     width: '100%',
+    borderRadius: 4,
   },
   text: {
     textAlign: 'center',
