@@ -143,5 +143,37 @@
   "please_wait": {
     "en": "Please wait",
     "es": "Por favor, esperar"
+  },
+  "horses": {
+    "en": "Horses",
+    "es": "Caballos"
+  },
+  "sheeps": {
+    "en": "Sheeps",
+    "es": "Ovejas"
+  },
+  "cows": {
+    "en": "Cows",
+    "es": "Vacas"
+  },
+  "pigs": {
+    "en": "Pigs",
+    "es": "Cerdos"
+  },
+  "search": {
+    "en": "Search",
+    "es": "Buscar"
+  },
+  "search_product_by": {
+    "en": "Search product by",
+    "es": "Buscar productos por"
+  },
+  "products_for": {
+    "en": "Products for",
+    "es": "Productos para"
+  },
+  "show_product": {
+    "en": "Show product",
+    "es": "Ver producto"
   }
 }

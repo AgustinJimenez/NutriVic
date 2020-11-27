@@ -33,6 +33,7 @@ const FlatButton = ({
   onPress = () => {},
   disabled = false,
   loading = false,
+  textStyle = {},
 }) => {
   if (!children) {
     children = (
@@ -45,6 +46,7 @@ const FlatButton = ({
               styles.text,
               primary ? global_styles.textLight : {},
               light ? global_styles.textPrimary : {},
+              textStyle,
             ]}
           >
             {title}

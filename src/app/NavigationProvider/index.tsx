@@ -7,6 +7,8 @@ import LoginScreen from '../../screens/LoginScreen'
 import WelcomeScreen from '../../screens/WelcomeScreen'
 
 import HomeScreen from '../../screens/HomeScreen'
+import ProductsScreen from '../../screens/ProductsScreen'
+import ProductDetailsScreen from '../../screens/ProductDetailsScreen'
 /*
 import LoginScreen from '../../screens/LoginScreen'
 */
@@ -29,6 +31,8 @@ const NavigationProvider = (props: any) => {
   return (
     <Stack.Navigator headerMode="none" initialRouteName="Home">
       <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Products" component={ProductsScreen} />
+      <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} />
       {/* <Stack.Screen name="Summary" component={SummaryScreen} /> */}
     </Stack.Navigator>
   )

@@ -1,5 +1,5 @@
 import React from 'react'
-import { StatusBar, Linking, Platform /* , LogBox  */ } from 'react-native'
+import { StatusBar, Linking, Platform, LogBox } from 'react-native'
 import NavigationProvider from './NavigationProvider'
 import { navigationRef } from './NavigationProvider/service'
 import AsyncStorage from '@react-native-community/async-storage'
@@ -14,7 +14,7 @@ import NetStatusChecker from './NetStatusChecker'
 import { NavigationContainer } from '@react-navigation/native'
 //import { disableYellowBox, ignoreWarnings } from '../../env.json'
 import GlobalFont from 'react-native-global-font'
-//LogBox.ignoreAllLogs()
+LogBox.ignoreAllLogs()
 
 const App = () => {
   const [isReady, setIsReady] = React.useState(__DEV__ ? false : true)

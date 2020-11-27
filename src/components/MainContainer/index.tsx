@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 })
 
 const MainContainer = ({ children }) => (
-  <>
+  <View style={{ flex: 1, backgroundColor: 'white' }}>
     <Image source={ImageWaves} style={styles.bgWavesTop} resizeMode="cover" />
     <Image
       source={ImageWaves}
@@ -102,7 +102,7 @@ const MainContainer = ({ children }) => (
         />
       </TouchableOpacity>
     </View>
-    <SafeAreaView style={styles.container}>{children}</SafeAreaView>
-  </>
+    {children}
+  </View>
 )
 export default MainContainer
