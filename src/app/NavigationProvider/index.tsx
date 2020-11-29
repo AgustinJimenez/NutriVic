@@ -2,19 +2,17 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 
 //SCREENS start
-import AuthLoadingScreen from '../../screens/AuthLoadingScreen'
 import LoginScreen from '../../screens/LoginScreen'
 import WelcomeScreen from '../../screens/WelcomeScreen'
 
 import HomeScreen from '../../screens/HomeScreen'
 import ProductsScreen from '../../screens/ProductsScreen'
 import ProductDetailsScreen from '../../screens/ProductDetailsScreen'
-/*
-import LoginScreen from '../../screens/LoginScreen'
-*/
 //SCREENS end
+
 import { useSelector } from 'react-redux'
 import { datasetSelector } from '../../redux/selectors'
+import MyBudgetScreen from '../../screens/MyBudgetScreen'
 
 //const Drawer = createDrawerNavigator()
 const Stack = createStackNavigator()
@@ -33,7 +31,7 @@ const NavigationProvider = (props: any) => {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Products" component={ProductsScreen} />
       <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} />
-      {/* <Stack.Screen name="Summary" component={SummaryScreen} /> */}
+      <Stack.Screen name="Product" component={MyBudgetScreen} />
     </Stack.Navigator>
   )
 }

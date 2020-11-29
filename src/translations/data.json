@@ -119,7 +119,10 @@
     "en": "Have no account yet",
     "es": "Aun no tengo cuenta"
   },
-
+  "presentation": {
+    "en": "Presentation",
+    "es": "Presentación"
+  },
   "products": {
     "en": "products",
     "es": "productos"
@@ -175,5 +178,25 @@
   "show_product": {
     "en": "Show product",
     "es": "Ver producto"
+  },
+  "indication": {
+    "en": "Indication",
+    "es": "Indicación"
+  },
+  "dose_and_application": {
+    "en": "Dose and application",
+    "es": "Dosis y aplicación"
+  },
+  "composition": {
+    "en": "Composition",
+    "es": "Composición"
+  },
+  "type": {
+    "en": "Type",
+    "es": "Tipo"
+  },
+  "add_to_budget": {
+    "en": "Add to budget",
+    "es": "Agregar al presupuesto"
   }
 }

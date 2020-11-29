@@ -6,6 +6,7 @@ import ImageVaccine from '../../../assets/images/vaccine.png'
 import global_styles, { colors } from '../../../styles'
 import { useTranslation } from 'react-i18next'
 import { useNavigation } from '@react-navigation/native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const styles = StyleSheet.create({
   container: {
@@ -75,7 +76,7 @@ const ProductListItem = ({ name = 'Antibrucelica Rosenbusch', style = {} }) => {
   const { t } = useTranslation()
   const navigation = useNavigation()
   return (
-    <View style={[styles.container, style]}>
+    <KeyboardAwareScrollView style={[styles.container, style]}>
       <Image source={ImageProduct} resizeMode="contain" style={styles.image} />
       <View style={styles.infoContainer}>
         <View style={styles.name_container}>
@@ -106,7 +107,7 @@ const ProductListItem = ({ name = 'Antibrucelica Rosenbusch', style = {} }) => {
           <Text style={styles.buttonText}>{t('show_product')}</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAwareScrollView>
   )
 }
 export default ProductListItem
