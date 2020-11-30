@@ -8,6 +8,7 @@ import WelcomeScreen from '../../screens/WelcomeScreen'
 import HomeScreen from '../../screens/HomeScreen'
 import ProductsScreen from '../../screens/ProductsScreen'
 import ProductDetailsScreen from '../../screens/ProductDetailsScreen'
+import BudgetConfirmScreen from '../../screens/BudgetConfirmScreen'
 //SCREENS end
 
 import { useSelector } from 'react-redux'
@@ -31,7 +32,8 @@ const NavigationProvider = (props: any) => {
       <Stack.Screen name="Home" component={HomeScreen} />
       <Stack.Screen name="Products" component={ProductsScreen} />
       <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} />
-      <Stack.Screen name="Product" component={MyBudgetScreen} />
+      <Stack.Screen name="MyBudget" component={MyBudgetScreen} />
+      <Stack.Screen name="BudgetConfirm" component={BudgetConfirmScreen} />
     </Stack.Navigator>
   )
 }

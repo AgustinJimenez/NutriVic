@@ -1,4 +1,8 @@
 {
+  "example_screen": {
+    "en": "Example Screen",
+    "es": "Pantalla de Ejemplo"
+  },
   "ECONNABORTED": {
     "en": "Cannot connect...",
     "es": "No se puede conectar..."
@@ -198,5 +202,61 @@
   "add_to_budget": {
     "en": "Add to budget",
     "es": "Agregar al presupuesto"
+  },
+  "category": {
+    "en": "Category",
+    "es": "Categoría"
+  },
+  "producer_sector": {
+    "en": "Producer sector",
+    "es": "Sector productor"
+  },
+  "species": {
+    "en": "Species",
+    "es": "Especies"
+  },
+  "all_products": {
+    "en": "All products",
+    "es": "Todos los productos"
+  },
+  "last_filter": {
+    "en": "Last filter",
+    "es": "Último filtro"
+  },
+  "request_budget": {
+    "en": "Request budget",
+    "es": "Solicitar presupuesto"
+  },
+  "my_budget": {
+    "en": "My budget",
+    "es": "Mi presupuesto"
+  },
+  "quantity": {
+    "en": "Quantify",
+    "es": "Cantidad"
+  },
+  "tanks_for_your_order": {
+    "en": "Thanks for your order",
+    "es": "¡Gracias por tu pedido!"
+  },
+  "a_adviser_will_contact_you_shortly_for_confirmation": {
+    "en": "A adviser will contact you shortly for confirmation",
+    "es": "Un asesor se comunicará en la brevedad para confirmar"
+  },
+  "payment_method": {
+    "en": "Payment method",
+    "es": "Forma de pago"
+  },
+  "shipping_logistic": {
+    "en": "Shipping logistic",
+    "es": "Logística de envío"
+  },
+  "invoice_data": {
+    "en": "Payment method",
+    "es": "Datos de factura"
+  },
+  "show_other_products": {
+    "en": "Show other products",
+    "es": "Ver otros productos"
   }
 }

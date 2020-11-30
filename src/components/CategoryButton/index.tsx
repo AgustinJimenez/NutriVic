@@ -4,18 +4,20 @@ import { colors, scale } from '../../styles'
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    paddingVertical: 7,
-    paddingHorizontal: 8,
+    width: scale(2),
+    height: scale(2.2),
+    paddingVertical: scale(0.2),
+    paddingHorizontal: scale(0.2),
     backgroundColor: colors.light(0.48),
     marginHorizontal: scale(0.15),
     alignItems: 'center',
-    borderRadius: 6,
+    borderRadius: scale(0.2),
   },
   title: {
     color: colors.primary(),
     fontWeight: '700',
     fontSize: 12,
+    //fontSize: scale(0.34),
     marginVertical: scale(0.15),
     textAlign: 'center',
   },

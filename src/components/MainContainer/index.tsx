@@ -15,7 +15,7 @@ import ImageShoppingCart from '../../assets/images/shopping_cart.png'
 import { colors, scale } from '../../styles'
 
 const styles = StyleSheet.create({
-  container: { flex: 1 },
+  container: { flex: 1, backgroundColor: 'white' },
   bgWavesTop: {
     position: 'absolute',
     width: '100%',
@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
 })
 
 const MainContainer = ({ children }) => (
-  <View style={{ flex: 1, backgroundColor: 'white' }}>
+  <View style={styles.container}>
     <Image source={ImageWaves} style={styles.bgWavesTop} resizeMode="cover" />
     <Image
       source={ImageWaves}

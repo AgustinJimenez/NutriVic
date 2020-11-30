@@ -7,12 +7,11 @@ import ImageHorse from '../../assets/images/horse.png'
 import ImagePig from '../../assets/images/pig.png'
 import ImageCow from '../../assets/images/cow.png'
 import ImageSheep from '../../assets/images/sheep.png'
-
-import CategoryButton from '../../components/CategoryButton'
 import ImageVaccine from '../../assets/images/vaccine.png'
 import ImagePills from '../../assets/images/pills.png'
 import ImageSaline from '../../assets/images/saline.png'
 import ImageSerum from '../../assets/images/serum.png'
+import CategoryButton from '../../components/CategoryButton'
 import FlatButton from '../../components/FlatButton'
 import { useTranslation } from 'react-i18next'
 import { useNavigation } from '@react-navigation/native'
@@ -22,11 +21,9 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     paddingHorizontal: scale(0.4),
     marginTop: scale(1),
-  },
-  section_title: {
+    fontSize: scale(0.5),
     color: colors.primary(),
     fontWeight: '800',
-    fontSize: 16,
   },
   section_title: {
     color: colors.primary(),
@@ -34,7 +31,7 @@ const styles = StyleSheet.create({
     marginTop: scale(0.5),
     paddingHorizontal: scale(0.2),
     paddingBottom: scale(0.2),
-    fontSize: 16,
+    fontSize: scale(0.38),
   },
   categories: {
     flexDirection: 'row',
@@ -44,9 +41,9 @@ const styles = StyleSheet.create({
   search: {
     alignItems: 'center',
     position: 'absolute',
-    bottom: 20,
-    right: 20,
-    left: 20,
+    bottom: scale(0.5),
+    right: scale(0.5),
+    left: scale(0.5),
   },
 })
 const SpeciesSection = ({}) => {
@@ -54,7 +51,7 @@ const SpeciesSection = ({}) => {
   const { t } = useTranslation()
   return (
     <View style={styles.section_title}>
-      <Text style={styles.section_title}> Especies </Text>
+      <Text style={styles.section_title}> {t('species')} </Text>
       <View style={styles.categories}>
         {[
           { image: ImageHorse, code: 'horses' },
@@ -78,9 +75,10 @@ const SpeciesSection = ({}) => {
   )
 }
 const ProducerSection = ({}) => {
+  const { t } = useTranslation()
   return (
     <View style={styles.section_title}>
-      <Text style={styles.section_title}> Sector productor </Text>
+      <Text style={styles.section_title}> {t('producer_sector')} </Text>
       <View style={styles.categories}>
         {[
           { title: 'Vacunas', image: ImageVaccine },
@@ -100,9 +98,10 @@ const ProducerSection = ({}) => {
   )
 }
 const CategorySection = ({}) => {
+  const { t } = useTranslation()
   return (
     <View style={styles.section_title}>
-      <Text style={styles.section_title}> Categoría </Text>
+      <Text style={styles.section_title}> {t('category')} </Text>
       <View style={styles.categories}>
         {[
           { title: 'Brucelosis', image: ImageVaccine, onPress: () => {} },
@@ -115,7 +114,6 @@ const CategorySection = ({}) => {
             img_source={image}
             onPress={onPress}
             key={key}
-            titleStyles={{ fontSize: 11 }}
           />
         ))}
       </View>
@@ -127,9 +125,7 @@ const HomeScreen = ({}) => {
   const { t } = useTranslation()
   return (
     <MainContainer>
-      <Text style={[global_styles.title, styles.title]}>
-        {t('search_product_by')}
-      </Text>
+      <Text style={[styles.title]}>{t('search_product_by')}</Text>
       <SpeciesSection />
       <ProducerSection />
       <CategorySection />

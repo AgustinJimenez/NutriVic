@@ -1,11 +1,12 @@
 import React from 'react'
-import { View, Image, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { View, Image, Text, StyleSheet } from 'react-native'
 import MainContainer from '../../components/MainContainer'
 import ImageProduct from '../../assets/images/product_1.png'
 import { colors, scale } from '../../styles'
 import { useTranslation } from 'react-i18next'
 import FlatButton from '../../components/FlatButton'
 import ProductIcon from '../../components/ProductIcon'
+import { useNavigation } from '@react-navigation/native'
 
 const defaultProduct = {
   name: 'Antibrucelica Rosenbusch',
@@ -23,34 +24,34 @@ const defaultProduct = {
 const styles = StyleSheet.create({
   firstPartContainer: { flexDirection: 'row' },
   image: {
-    width: 190.32,
-    height: 259.57,
+    width: scale(4.598),
+    height: scale(6.27),
   },
   firstPartInfo: {},
   name: {
-    marginTop: 19,
-    width: 171,
+    marginTop: scale(0.46),
+    width: scale(4.137),
     fontWeight: '700',
-    fontSize: 24.33,
+    fontSize: scale(0.588),
     color: colors.primary(),
-    marginBottom: 10,
+    marginBottom: scale(0.242),
   },
   inticationTitle: {
     color: colors.primary(),
-    fontSize: 13,
+    fontSize: scale(0.316),
     fontWeight: '700',
-    lineHeight: 17.6,
+    lineHeight: scale(0.429),
   },
   indicationContent: {
     color: colors.primary(),
-    fontSize: 10,
+    fontSize: scale(0.242),
     fontWeight: '400',
-    width: 189,
-    lineHeight: 17.6,
+    width: scale(4.566),
+    lineHeight: scale(0.429),
   },
   secondPartContainer: {},
   infoContainer: {
-    paddingLeft: 26,
+    paddingLeft: scale(0.63),
   },
   lightBg: {
     backgroundColor: colors.light(0.6),
@@ -58,16 +59,16 @@ const styles = StyleSheet.create({
   infoTitle: {
     color: colors.primary(),
     fontWeight: '700',
-    fontSize: 19,
-    marginVertical: 10,
+    fontSize: scale(0.46),
+    marginVertical: scale(0.242),
   },
   infoContent: {
     color: colors.primary(),
     fontWeight: '400',
-    fontSize: 11,
-    marginBottom: 20,
-    lineHeight: 14.89,
-    width: 333,
+    fontSize: scale(0.27),
+    marginBottom: scale(0.49),
+    lineHeight: scale(0.36),
+    width: scale(8.044),
   },
   buttonContainer: {
     position: 'absolute',
@@ -78,11 +79,12 @@ const styles = StyleSheet.create({
   },
   categoriesIconsContainers: { flexDirection: 'row' },
   categoryIcon: {
-    marginRight: 2,
+    marginRight: scale(0.049),
   },
 })
 
 const ProductDetailsScreen = ({ product = defaultProduct }) => {
+  const navigation = useNavigation()
   const { t } = useTranslation()
   return (
     <MainContainer>
@@ -133,7 +135,10 @@ const ProductDetailsScreen = ({ product = defaultProduct }) => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <FlatButton title={t('add_to_budget')} />
+        <FlatButton
+          title={t('add_to_budget')}
+          onPress={() => navigation.navigate('MyBudget')}
+        />
       </View>
     </MainContainer>
   )

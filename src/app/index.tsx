@@ -7,13 +7,14 @@ import { Provider as ReduxProvider } from 'react-redux'
 import { store, persistor } from '../redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 import { Root } from 'native-base'
-import LoadingScreen from '../screens/AuthLoadingScreen'
+
 //import NavigationMiddleware from './NavigationScreenMiddleware'
 import './i18n'
 import NetStatusChecker from './NetStatusChecker'
 import { NavigationContainer } from '@react-navigation/native'
 //import { disableYellowBox, ignoreWarnings } from '../../env.json'
 import GlobalFont from 'react-native-global-font'
+import LoadingScreen from '../screens/LoadingScreen'
 LogBox.ignoreAllLogs()
 
 const App = () => {

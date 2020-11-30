@@ -20,19 +20,24 @@ import LinearGradient from 'react-native-linear-gradient'
 
 const styles = StyleSheet.create({
   image: {
-    width: 55,
-    height: 60,
-    marginTop: scale(0.4),
+    width: scale(1.3),
+    height: scale(1.3),
+    marginTop: scale(0.3),
     alignSelf: 'center',
   },
   product: {
-    width: 172,
-    height: 233,
+    width: scale(4.4),
   },
   productsList: {
     alignItems: 'center',
-    paddingBottom: 400,
-    marginTop: 20,
+    paddingBottom: scale(8),
+    marginTop: scale(0.45),
+  },
+  bottomGradient: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%',
+    height: scale(2.3),
   },
 })
 
@@ -103,12 +108,7 @@ const ProductsScreen = ({}) => {
       />
       <LinearGradient
         colors={['rgba(255,255,255, 0)', 'rgba(255,255,255,1)']}
-        style={{
-          position: 'absolute',
-          bottom: 0,
-          width: '100%',
-          height: 94,
-        }}
+        style={styles.bottomGradient}
       />
     </MainContainer>
   )
