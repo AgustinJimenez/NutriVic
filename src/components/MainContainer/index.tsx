@@ -94,7 +94,7 @@ const MainContainer = ({ children }: any) => (
         />
       </TouchableOpacity>
       <View style={styles.userNameContainer}>
-        <Text style={styles.user_name}>Hola, Juan {scale(6.184)} </Text>
+        <Text style={styles.user_name}>Hola, Juan </Text>
       </View>
       <TouchableOpacity style={styles.shoppingCartContainer} onPress={() => {}}>
         <Image
