@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     marginVertical: scale(0.2),
     paddingLeft: scale(0.2),
     paddingVertical: scale(0.1),
+    borderRadius: 3,
   },
   buttonText: {
     fontWeight: '700',
