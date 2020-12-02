@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 import FlatButton from '../../components/FlatButton'
 import ProductIcon from '../../components/ProductIcon'
 import { useNavigation } from '@react-navigation/native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const defaultProduct = {
   name: 'Antibrucelica Rosenbusch',
@@ -22,6 +23,9 @@ const defaultProduct = {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    paddingBottom: scale(4),
+  },
   firstPartContainer: { flexDirection: 'row' },
   image: {
     width: scale(4.598),
@@ -60,7 +64,7 @@ const styles = StyleSheet.create({
     color: colors.primary(),
     fontWeight: '700',
     fontSize: scale(0.46),
-    marginVertical: scale(0.242),
+    marginTop: scale(0.242),
   },
   infoContent: {
     color: colors.primary(),
@@ -88,52 +92,58 @@ const ProductDetailsScreen = ({ product = defaultProduct }) => {
   const { t } = useTranslation()
   return (
     <MainContainer>
-      <View style={styles.firstPartContainer}>
-        <Image source={ImageProduct} resizeMode="cover" style={styles.image} />
-        <View style={styles.firstPartInfo}>
-          <Text style={styles.name}>{product.name}</Text>
-          <Text style={styles.inticationTitle}>{t('indication')}</Text>
-          <Text style={styles.indicationContent}>{product.indication}</Text>
-          <View style={styles.categoriesIconsContainers}>
-            {[
-              {
-                code: 'vaccines',
-              },
-              {
-                code: 'cows',
-              },
-            ].map(({ code }, key) => (
-              <ProductIcon
-                code={code}
-                bordered
-                key={key}
-                style={styles.categoryIcon}
-              />
-            ))}
+      <KeyboardAwareScrollView contentContainerStyle={styles.container}>
+        <View style={styles.firstPartContainer}>
+          <Image
+            source={ImageProduct}
+            resizeMode="cover"
+            style={styles.image}
+          />
+          <View style={styles.firstPartInfo}>
+            <Text style={styles.name}>{product.name}</Text>
+            <Text style={styles.inticationTitle}>{t('indication')}</Text>
+            <Text style={styles.indicationContent}>{product.indication}</Text>
+            <View style={styles.categoriesIconsContainers}>
+              {[
+                {
+                  code: 'vaccines',
+                },
+                {
+                  code: 'cows',
+                },
+              ].map(({ code }, key) => (
+                <ProductIcon
+                  code={code}
+                  bordered
+                  key={key}
+                  style={styles.categoryIcon}
+                />
+              ))}
+            </View>
           </View>
         </View>
-      </View>
-      <View style={styles.secondPartContainer}>
-        <View style={[styles.infoContainer, styles.lightBg]}>
-          <Text style={styles.infoTitle}>{t('presentation')}</Text>
-          <Text style={styles.infoContent}>{product.presentation}</Text>
-        </View>
+        <View style={styles.secondPartContainer}>
+          <View style={[styles.infoContainer, styles.lightBg]}>
+            <Text style={styles.infoTitle}>{t('presentation')}</Text>
+            <Text style={styles.infoContent}>{product.presentation}</Text>
+          </View>
 
-        <View style={styles.infoContainer}>
-          <Text style={styles.infoTitle}>{t('dose_and_application')}</Text>
-          <Text style={styles.infoContent}>{product.dose_application}</Text>
-        </View>
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoTitle}>{t('dose_and_application')}</Text>
+            <Text style={styles.infoContent}>{product.dose_application}</Text>
+          </View>
 
-        <View style={[styles.infoContainer, styles.lightBg]}>
-          <Text style={styles.infoTitle}>{t('composition')}</Text>
-          <Text style={styles.infoContent}>{product.composition}</Text>
-        </View>
+          <View style={[styles.infoContainer, styles.lightBg]}>
+            <Text style={styles.infoTitle}>{t('composition')}</Text>
+            <Text style={styles.infoContent}>{product.composition}</Text>
+          </View>
 
-        <View style={styles.infoContainer}>
-          <Text style={styles.infoTitle}>{t('type')}</Text>
-          <Text style={styles.infoContent}>{product.type}</Text>
+          <View style={styles.infoContainer}>
+            <Text style={styles.infoTitle}>{t('type')}</Text>
+            <Text style={styles.infoContent}>{product.type}</Text>
+          </View>
         </View>
-      </View>
+      </KeyboardAwareScrollView>
       <View style={styles.buttonContainer}>
         <FlatButton
           title={t('add_to_budget')}

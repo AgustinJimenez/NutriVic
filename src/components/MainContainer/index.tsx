@@ -19,15 +19,17 @@ const styles = StyleSheet.create({
   bgWavesTop: {
     position: 'absolute',
     width: '100%',
-    height: '60%',
-    opacity: 0.67,
+    height: scale(6.184),
+    top: scale(0.5),
+    opacity: 0.4,
   },
   bgWavesBottom: {
     position: 'absolute',
     width: '100%',
-    height: '60%',
-    opacity: 0.67,
-    bottom: -scale(5),
+    height: scale(6.184),
+    opacity: 0.4,
+    bottom: 0,
+    transform: [{ rotate: '180deg' }],
   },
   avatarContainer: {
     flex: 0.2,
@@ -35,14 +37,14 @@ const styles = StyleSheet.create({
     //backgroundColor: 'red',
   },
   avatar: {
-    width: scale(1.5),
-    height: scale(1.5),
+    width: scale(0.968),
+    height: scale(0.968),
     //backgroundColor: 'green',
   },
   navbar: {
     flexDirection: 'row',
-    paddingTop: Platform.OS === 'ios' ? scale(1.1) : scale(0.5),
-    paddingBottom: scale(0.4),
+    paddingTop: scale(Platform.OS === 'ios' ? 1.1 : 0.5),
+    paddingBottom: scale(0.2),
     backgroundColor: colors.primary(),
   },
   shoppingCartContainer: {
@@ -54,18 +56,18 @@ const styles = StyleSheet.create({
     paddingHorizontal: scale(0.4),
     paddingVertical: scale(0.3),
     borderRadius: scale(0.1),
+    width: scale(1.257),
+    height: scale(1.089),
     //backgroundColor: 'red',
   },
   shoppingCart: {
     //backgroundColor: 'red',
-    width: scale(0.8),
-    height: scale(0.8),
+    width: '140%',
+    height: '140%',
   },
   userNameContainer: {
     flex: 1,
-    justifyContent: 'center',
-    left: 15,
-    //backgroundColor: 'red',
+    textAlignVertical: 'center',
   },
   user_name: {
     color: 'white',
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
   },
 })
 
-const MainContainer = ({ children }) => (
+const MainContainer = ({ children }: any) => (
   <View style={styles.container}>
     <Image source={ImageWaves} style={styles.bgWavesTop} resizeMode="cover" />
     <Image
@@ -92,13 +94,13 @@ const MainContainer = ({ children }) => (
         />
       </TouchableOpacity>
       <View style={styles.userNameContainer}>
-        <Text style={styles.user_name}>Hola, Juan</Text>
+        <Text style={styles.user_name}>Hola, Juan {scale(6.184)} </Text>
       </View>
       <TouchableOpacity style={styles.shoppingCartContainer} onPress={() => {}}>
         <Image
           source={ImageShoppingCart}
-          resizeMode="contain"
           style={styles.shoppingCart}
+          resizeMode="stretch"
         />
       </TouchableOpacity>
     </View>

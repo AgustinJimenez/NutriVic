@@ -7,7 +7,14 @@ import { useNavigation } from '@react-navigation/native'
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: scale(3),
+    flex: 1,
+    alignItems: 'center',
+    marginTop: scale(6),
+    justifyContent: 'center',
+  },
+  buttonsContainer: {
+    width: '80%',
+    alignItems: 'center',
   },
 })
 const WelcomeScreen = ({}) => {
@@ -16,11 +23,13 @@ const WelcomeScreen = ({}) => {
     <IntroContainer>
       <View style={styles.container}>
         <Text style={global_styles.title}>Bienvenido!</Text>
-        <FlatButton
-          title="Ingresar"
-          onPress={() => navigation.navigate('Login')}
-        />
-        <FlatButton title="Quiero registrarme" light />
+        <View style={styles.buttonsContainer}>
+          <FlatButton
+            title="Ingresar"
+            onPress={() => navigation.navigate('Login')}
+          />
+          <FlatButton title="Quiero registrarme" light />
+        </View>
       </View>
     </IntroContainer>
   )

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
   name: {
     color: colors.primary(),
-    fontWeight: '700',
+    fontWeight: 'bold',
     fontSize: scale(0.47),
     marginVertical: 16.33,
   },
@@ -134,13 +134,13 @@ const CounterInputs = ({ quantity = 0, onChange = (value: number) => {} }) => {
 
 const RemoveButton = () => {
   return (
-    <TouchableOpacity style={styles.removeCross}>
+    <TouchableOpacity style={styles.removeCross} onPress={() => {}}>
       <Icon name="cross" type="Entypo" style={styles.removeCrossIcon} />
     </TouchableOpacity>
   )
 }
 
-const BudgetListItem = ({ imageSource, name = '', quantify = 0 }: any) => {
+const BudgetListItem = ({ imageSource, name = '', quantity = 0 }: any) => {
   const { t } = useTranslation()
   return (
     <View style={styles.container}>
@@ -150,7 +150,7 @@ const BudgetListItem = ({ imageSource, name = '', quantify = 0 }: any) => {
         <Text style={styles.name}>{name}</Text>
         <View style={styles.inputsContainer}>
           <Text style={styles.quantity}>{t('quantity')}</Text>
-          <CounterInputs quantify={quantify} onChange={(value: number) => {}} />
+          <CounterInputs quantity={quantity} onChange={(value: number) => {}} />
         </View>
       </View>
     </View>

@@ -32,6 +32,25 @@
 		3B8F1D59550C4976BD7D51D7 /* Montserrat-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 184CBAFB2B8B4C84944E252B /* Montserrat-SemiBoldItalic.ttf */; };
 		C6EA8BAB9E544D869A3BEE35 /* Montserrat-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35B3A9FE41F94FA3B229A820 /* Montserrat-Thin.ttf */; };
 		D4F5434355134434925398F9 /* Montserrat-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E27DF67A83E420690C39A22 /* Montserrat-ThinItalic.ttf */; };
+		2214905C35EE47B88C982ECA /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB2DFA074174DF499FD44D0 /* app_icon.png */; };
+		30AE345A05944B8FB80B89D1 /* avatar_default.png in Resources */ = {isa = PBXBuildFile; fileRef = B55621D73D4E4AF59449AF87 /* avatar_default.png */; };
+		A3A9DCDEEB834CD98ADF638F /* bg_one.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B6785EDC89546C986BA38CC /* bg_one.png */; };
+		1106EE1F4E3745FFA95011A6 /* bg_zero.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3B2B5E07D54352A0A19725 /* bg_zero.png */; };
+		808AFDE8528A46AC812F2F08 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = 672E1C05FC6A42B4A8ED323C /* cow.png */; };
+		DFB85451CB2B4158ADB0D5FA /* horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 99DF60F111AE4B3BA2EB5D71 /* horse.png */; };
+		7DDDA744EC574BEE8D34AC98 /* person_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 089525ABF8B54BD3A248C59A /* person_ok.png */; };
+		66DB3CBF71CE4DAB887CC72B /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C37F04DAAE84D6B89207B7C /* pig.png */; };
+		E5016926752C4129B075EB27 /* pills.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E2F7149B4AA497CA6FFBA25 /* pills.png */; };
+		60D7935900B74874BB5A24FE /* product_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 952CA28531E34A44B6D1821B /* product_1.png */; };
+		BA9D6AEC01AC48E08929003E /* product_2.png in Resources */ = {isa = PBXBuildFile; fileRef = FDE4F2D2722B4D9B905555C9 /* product_2.png */; };
+		3B1AE0223052401DB7B0068E /* saline.png in Resources */ = {isa = PBXBuildFile; fileRef = EE44FCC7AA6F428FA6D643D9 /* saline.png */; };
+		D9A2C1DEC69B446CB8088F9D /* serum.png in Resources */ = {isa = PBXBuildFile; fileRef = 90507504BC914E6E8C7134CF /* serum.png */; };
+		E2BC2E98D7224C3A9F3BD18C /* sheep.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D81D30B06B460FB8BA44F6 /* sheep.png */; };
+		F692D3C1F26C47B2B6B4E36A /* shopping_cart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1235578BB52542CEA348360D /* shopping_cart.png */; };
+		791D3E708D0F40D58BAD674D /* vaccine.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6E0AA68592495F966792E4 /* vaccine.png */; };
+		74561D3B3362412F8C302BD8 /* vector_red.png in Resources */ = {isa = PBXBuildFile; fileRef = DA67CF2BBF7E44AC990FCB0E /* vector_red.png */; };
+		42BC9AB3054C496EAB18F6FC /* waves_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 62841FD748974EC0A88C3B5B /* waves_bg.png */; };
+		8B9E34F67D2B417CA2D6E26F /* waves_bottom_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 12476F28A25B45768F21E3F3 /* waves_bottom_bg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +147,25 @@
 		184CBAFB2B8B4C84944E252B /* Montserrat-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-SemiBoldItalic.ttf"; path = "../src/assets/fonts/Montserrat-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		35B3A9FE41F94FA3B229A820 /* Montserrat-Thin.ttf */ = {isa = PBXFileReference; name = "Montserrat-Thin.ttf"; path = "../src/assets/fonts/Montserrat-Thin.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7E27DF67A83E420690C39A22 /* Montserrat-ThinItalic.ttf */ = {isa = PBXFileReference; name = "Montserrat-ThinItalic.ttf"; path = "../src/assets/fonts/Montserrat-ThinItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		ABB2DFA074174DF499FD44D0 /* app_icon.png */ = {isa = PBXFileReference; name = "app_icon.png"; path = "../src/assets/images/app_icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B55621D73D4E4AF59449AF87 /* avatar_default.png */ = {isa = PBXFileReference; name = "avatar_default.png"; path = "../src/assets/images/avatar_default.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5B6785EDC89546C986BA38CC /* bg_one.png */ = {isa = PBXFileReference; name = "bg_one.png"; path = "../src/assets/images/bg_one.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0C3B2B5E07D54352A0A19725 /* bg_zero.png */ = {isa = PBXFileReference; name = "bg_zero.png"; path = "../src/assets/images/bg_zero.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		672E1C05FC6A42B4A8ED323C /* cow.png */ = {isa = PBXFileReference; name = "cow.png"; path = "../src/assets/images/cow.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		99DF60F111AE4B3BA2EB5D71 /* horse.png */ = {isa = PBXFileReference; name = "horse.png"; path = "../src/assets/images/horse.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		089525ABF8B54BD3A248C59A /* person_ok.png */ = {isa = PBXFileReference; name = "person_ok.png"; path = "../src/assets/images/person_ok.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5C37F04DAAE84D6B89207B7C /* pig.png */ = {isa = PBXFileReference; name = "pig.png"; path = "../src/assets/images/pig.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8E2F7149B4AA497CA6FFBA25 /* pills.png */ = {isa = PBXFileReference; name = "pills.png"; path = "../src/assets/images/pills.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		952CA28531E34A44B6D1821B /* product_1.png */ = {isa = PBXFileReference; name = "product_1.png"; path = "../src/assets/images/product_1.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FDE4F2D2722B4D9B905555C9 /* product_2.png */ = {isa = PBXFileReference; name = "product_2.png"; path = "../src/assets/images/product_2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EE44FCC7AA6F428FA6D643D9 /* saline.png */ = {isa = PBXFileReference; name = "saline.png"; path = "../src/assets/images/saline.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		90507504BC914E6E8C7134CF /* serum.png */ = {isa = PBXFileReference; name = "serum.png"; path = "../src/assets/images/serum.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		50D81D30B06B460FB8BA44F6 /* sheep.png */ = {isa = PBXFileReference; name = "sheep.png"; path = "../src/assets/images/sheep.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1235578BB52542CEA348360D /* shopping_cart.png */ = {isa = PBXFileReference; name = "shopping_cart.png"; path = "../src/assets/images/shopping_cart.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CD6E0AA68592495F966792E4 /* vaccine.png */ = {isa = PBXFileReference; name = "vaccine.png"; path = "../src/assets/images/vaccine.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA67CF2BBF7E44AC990FCB0E /* vector_red.png */ = {isa = PBXFileReference; name = "vector_red.png"; path = "../src/assets/images/vector_red.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		62841FD748974EC0A88C3B5B /* waves_bg.png */ = {isa = PBXFileReference; name = "waves_bg.png"; path = "../src/assets/images/waves_bg.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		12476F28A25B45768F21E3F3 /* waves_bottom_bg.png */ = {isa = PBXFileReference; name = "waves_bottom_bg.png"; path = "../src/assets/images/waves_bottom_bg.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -313,6 +351,25 @@
 				184CBAFB2B8B4C84944E252B /* Montserrat-SemiBoldItalic.ttf */,
 				35B3A9FE41F94FA3B229A820 /* Montserrat-Thin.ttf */,
 				7E27DF67A83E420690C39A22 /* Montserrat-ThinItalic.ttf */,
+				ABB2DFA074174DF499FD44D0 /* app_icon.png */,
+				B55621D73D4E4AF59449AF87 /* avatar_default.png */,
+				5B6785EDC89546C986BA38CC /* bg_one.png */,
+				0C3B2B5E07D54352A0A19725 /* bg_zero.png */,
+				672E1C05FC6A42B4A8ED323C /* cow.png */,
+				99DF60F111AE4B3BA2EB5D71 /* horse.png */,
+				089525ABF8B54BD3A248C59A /* person_ok.png */,
+				5C37F04DAAE84D6B89207B7C /* pig.png */,
+				8E2F7149B4AA497CA6FFBA25 /* pills.png */,
+				952CA28531E34A44B6D1821B /* product_1.png */,
+				FDE4F2D2722B4D9B905555C9 /* product_2.png */,
+				EE44FCC7AA6F428FA6D643D9 /* saline.png */,
+				90507504BC914E6E8C7134CF /* serum.png */,
+				50D81D30B06B460FB8BA44F6 /* sheep.png */,
+				1235578BB52542CEA348360D /* shopping_cart.png */,
+				CD6E0AA68592495F966792E4 /* vaccine.png */,
+				DA67CF2BBF7E44AC990FCB0E /* vector_red.png */,
+				62841FD748974EC0A88C3B5B /* waves_bg.png */,
+				12476F28A25B45768F21E3F3 /* waves_bottom_bg.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -404,6 +461,25 @@
 				3B8F1D59550C4976BD7D51D7 /* Montserrat-SemiBoldItalic.ttf in Resources */,
 				C6EA8BAB9E544D869A3BEE35 /* Montserrat-Thin.ttf in Resources */,
 				D4F5434355134434925398F9 /* Montserrat-ThinItalic.ttf in Resources */,
+				2214905C35EE47B88C982ECA /* app_icon.png in Resources */,
+				30AE345A05944B8FB80B89D1 /* avatar_default.png in Resources */,
+				A3A9DCDEEB834CD98ADF638F /* bg_one.png in Resources */,
+				1106EE1F4E3745FFA95011A6 /* bg_zero.png in Resources */,
+				808AFDE8528A46AC812F2F08 /* cow.png in Resources */,
+				DFB85451CB2B4158ADB0D5FA /* horse.png in Resources */,
+				7DDDA744EC574BEE8D34AC98 /* person_ok.png in Resources */,
+				66DB3CBF71CE4DAB887CC72B /* pig.png in Resources */,
+				E5016926752C4129B075EB27 /* pills.png in Resources */,
+				60D7935900B74874BB5A24FE /* product_1.png in Resources */,
+				BA9D6AEC01AC48E08929003E /* product_2.png in Resources */,
+				3B1AE0223052401DB7B0068E /* saline.png in Resources */,
+				D9A2C1DEC69B446CB8088F9D /* serum.png in Resources */,
+				E2BC2E98D7224C3A9F3BD18C /* sheep.png in Resources */,
+				F692D3C1F26C47B2B6B4E36A /* shopping_cart.png in Resources */,
+				791D3E708D0F40D58BAD674D /* vaccine.png in Resources */,
+				74561D3B3362412F8C302BD8 /* vector_red.png in Resources */,
+				42BC9AB3054C496EAB18F6FC /* waves_bg.png in Resources */,
+				8B9E34F67D2B417CA2D6E26F /* waves_bottom_bg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

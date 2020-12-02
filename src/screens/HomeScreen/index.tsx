@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text, View, StyleSheet } from 'react-native'
 import MainContainer from '../../components/MainContainer'
-import global_styles, { colors, scale } from '../../styles'
+import { colors, scale } from '../../styles'
 
 import ImageHorse from '../../assets/images/horse.png'
 import ImagePig from '../../assets/images/pig.png'
@@ -23,11 +23,11 @@ const styles = StyleSheet.create({
     marginTop: scale(1),
     fontSize: scale(0.5),
     color: colors.primary(),
-    fontWeight: '800',
+    fontWeight: 'bold',
   },
   section_title: {
     color: colors.primary(),
-    fontWeight: '800',
+    fontWeight: 'bold',
     marginTop: scale(0.5),
     paddingHorizontal: scale(0.2),
     paddingBottom: scale(0.2),

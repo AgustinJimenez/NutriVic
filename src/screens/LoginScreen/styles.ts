@@ -4,7 +4,9 @@ import { colors } from '../../styles'
 
 const styles = StyleSheet.create({
   title: {
-    marginBottom: 5,
+    textShadowColor: 'white',
+    textShadowOffset: { width: 0.5, height: 0.5 },
+    textShadowRadius: 1,
   },
   submit: {
     borderRadius: 4,
@@ -25,6 +27,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   form: {
+    marginTop: scale(3),
     width: '85%',
     alignSelf: 'center',
     alignItems: 'center',
@@ -38,6 +41,7 @@ const styles = StyleSheet.create({
   },
   sigInButtonDisabled: { backgroundColor: 'gray' },
   inputContainer: {
+    backgroundColor: 'white',
     marginTop: scale(0.3),
     borderRadius: 4,
     paddingHorizontal: 10,
@@ -54,9 +58,10 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   register: {
+    position: 'relative',
+    marginBottom: scale(Platform.OS === 'android' ? 0.8 : 0),
     flexDirection: 'row',
     justifyContent: 'center',
-    paddingHorizontal: scale(0.1),
   },
   registerText: {
     textAlign: 'center',

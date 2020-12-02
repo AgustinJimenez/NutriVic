@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
   name: {
     width: '100%',
     textAlign: 'center',
-    fontWeight: '600',
+    fontWeight: 'bold',
     paddingHorizontal: scale(0.2),
     fontSize: scale(0.3),
     marginVertical: scale(0.15),

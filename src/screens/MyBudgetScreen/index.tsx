@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     color: colors.primary(),
     fontSize: scale(0.515),
-    fontWeight: '800',
+    fontWeight: 'bold',
     textAlign: 'center',
     top: scale(0.8),
     right: 0,
@@ -136,6 +136,7 @@ const BudgetList = () => {
       renderItem={({ item, index }: any) => (
         <BudgetListItem
           name={item.name}
+          quantity={item.quantity}
           imageSource={item.image}
           style={styles.budgetListItem}
           key={index}

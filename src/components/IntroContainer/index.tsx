@@ -3,35 +3,44 @@ import { Image, StyleSheet, SafeAreaView, View } from 'react-native'
 import ImageAppIcon from '../../assets/images/app_icon.png'
 import ImageBgZero from '../../assets/images/bg_zero.png'
 import ImageVector from '../../assets/images/vector_red.png'
+import { scale } from '../../styles'
 
 const styles = StyleSheet.create({
   vector_red: {
     position: 'absolute',
     width: '100%',
-    top: '14%',
-    bottom: '57.64%',
+    top: scale(3.7),
   },
   icon: {
+    position: 'absolute',
     width: 119.37,
     height: 159,
-    position: 'absolute',
-    top: 75,
     left: 121,
+    top: scale(2.3),
   },
-  bg: { width: '100%', height: 395, marginTop: -10, position: 'absolute' },
-  container: { flex: 1 },
+  bg: {
+    position: 'absolute',
+    top: 0,
+    width: '100%',
+    height: 395,
+  },
+  container: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  safeArea: { flex: 1 },
 })
 
-const WelcomeScreen = ({ children }: any = {}) => (
-  <>
-    <Image source={ImageBgZero} resizeMode="contain" style={styles.bg} />
+const IntroContainer = ({ children }: any = {}) => (
+  <View style={styles.container}>
+    <Image source={ImageBgZero} style={styles.bg} />
     <Image source={ImageAppIcon} resizeMode="contain" style={styles.icon} />
     <Image
       source={ImageVector}
       resizeMode="contain"
       style={styles.vector_red}
     />
-    <SafeAreaView style={styles.container}>{children}</SafeAreaView>
-  </>
+    <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
+  </View>
 )
-export default WelcomeScreen
+export default IntroContainer

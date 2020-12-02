@@ -29,8 +29,8 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: colors.primary(0.08),
     marginVertical: scale(0.2),
+    paddingLeft: scale(0.2),
     paddingVertical: scale(0.1),
-    //width: '40%',
   },
   buttonText: {
     fontWeight: '700',

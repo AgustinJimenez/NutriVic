@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Input, Item, Text, Form } from 'native-base'
+import { View, Input, Item, Text, Form, Icon } from 'native-base'
 import global_styles from '../../styles'
 import ToggleEye from './ToggleEye'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -56,7 +56,9 @@ const LoginScreen = ({}) => {
       <View style={styles.emptyBox} />
       <KeyboardAwareScrollView contentContainerStyle={styles.formContainer}>
         <Form style={styles.form}>
-          <Text style={[global_styles.title, styles.title]}>Bienvenido!</Text>
+          <Text style={[global_styles.title, styles.title]}>
+            {t('welcome')}!
+          </Text>
           <Item regular style={styles.inputContainer}>
             <Input
               ref={inputEmail}
