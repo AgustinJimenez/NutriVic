@@ -27,7 +27,6 @@
 		4CCF060493BA43DD9659A706 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F33CE5D00DE74457B856B41F /* Montserrat-Bold.ttf */; };
 		60D7935900B74874BB5A24FE /* product_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 952CA28531E34A44B6D1821B /* product_1.png */; };
 		66DB3CBF71CE4DAB887CC72B /* pig.png in Resources */ = {isa = PBXBuildFile; fileRef = 5C37F04DAAE84D6B89207B7C /* pig.png */; };
-		74561D3B3362412F8C302BD8 /* vector_red.png in Resources */ = {isa = PBXBuildFile; fileRef = DA67CF2BBF7E44AC990FCB0E /* vector_red.png */; };
 		791D3E708D0F40D58BAD674D /* vaccine.png in Resources */ = {isa = PBXBuildFile; fileRef = CD6E0AA68592495F966792E4 /* vaccine.png */; };
 		7DDDA744EC574BEE8D34AC98 /* person_ok.png in Resources */ = {isa = PBXBuildFile; fileRef = 089525ABF8B54BD3A248C59A /* person_ok.png */; };
 		808AFDE8528A46AC812F2F08 /* cow.png in Resources */ = {isa = PBXBuildFile; fileRef = 672E1C05FC6A42B4A8ED323C /* cow.png */; };
@@ -149,7 +148,6 @@
 		C921361F49AB4C5EAB116A18 /* Montserrat-ExtraLightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-ExtraLightItalic.ttf"; path = "../src/assets/fonts/Montserrat-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		CD6E0AA68592495F966792E4 /* vaccine.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = vaccine.png; path = ../src/assets/images/vaccine.png; sourceTree = "<group>"; };
 		D6574ECDD5514A76B76205C1 /* dls_logo.orig.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = dls_logo.orig.png; path = ../src/assets/images/dls_logo.orig.png; sourceTree = "<group>"; };
-		DA67CF2BBF7E44AC990FCB0E /* vector_red.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = vector_red.png; path = ../src/assets/images/vector_red.png; sourceTree = "<group>"; };
 		DC3EDE5A9E9645AD89D86604 /* Montserrat-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Montserrat-ExtraBoldItalic.ttf"; path = "../src/assets/fonts/Montserrat-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
 		DC97BB2B44694440937B9212 /* eye_hide.png */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = eye_hide.png; path = ../src/assets/images/eye_hide.png; sourceTree = "<group>"; };
 		DEF7910ADC84495CAC647182 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 				50D81D30B06B460FB8BA44F6 /* sheep.png */,
 				1235578BB52542CEA348360D /* shopping_cart.png */,
 				CD6E0AA68592495F966792E4 /* vaccine.png */,
-				DA67CF2BBF7E44AC990FCB0E /* vector_red.png */,
 				62841FD748974EC0A88C3B5B /* waves_bg.png */,
 				12476F28A25B45768F21E3F3 /* waves_bottom_bg.png */,
 			);
@@ -478,7 +475,6 @@
 				E2BC2E98D7224C3A9F3BD18C /* sheep.png in Resources */,
 				F692D3C1F26C47B2B6B4E36A /* shopping_cart.png in Resources */,
 				791D3E708D0F40D58BAD674D /* vaccine.png in Resources */,
-				74561D3B3362412F8C302BD8 /* vector_red.png in Resources */,
 				42BC9AB3054C496EAB18F6FC /* waves_bg.png in Resources */,
 				8B9E34F67D2B417CA2D6E26F /* waves_bottom_bg.png in Resources */,
 			);

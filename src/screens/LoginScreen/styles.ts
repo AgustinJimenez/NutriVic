@@ -24,13 +24,15 @@ const styles = StyleSheet.create({
   },
   formContainer: {
     flex: 1,
-    justifyContent: 'center',
+    //backgroundColor: 'green',
   },
   form: {
-    marginTop: scale(3),
+    flex: 1,
+    marginTop: scale(6),
     width: '85%',
     alignSelf: 'center',
     alignItems: 'center',
+    justifyContent: 'flex-end',
   },
   sigInText: { color: 'black', fontSize: 18 },
   sigInTextDisabled: { color: 'white' },
@@ -57,11 +59,17 @@ const styles = StyleSheet.create({
     fontWeight: '500',
     fontSize: 13,
   },
+  registerContainer: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    paddingBottom: scale(1),
+  },
   register: {
-    position: 'relative',
-    marginBottom: scale(Platform.OS === 'android' ? 0.8 : 0),
+    //bottom: scale(Platform.OS === 'android' ? 0.8 : scale(0.3)),
     flexDirection: 'row',
     justifyContent: 'center',
+    //alignSelf: 'flex-end',
+    //alignItems: 'flex-end',
   },
   registerText: {
     textAlign: 'center',

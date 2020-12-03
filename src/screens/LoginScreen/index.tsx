@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Input, Item, Text, Form, Icon } from 'native-base'
+import { View, Input, Item, Text, Form } from 'native-base'
 import global_styles from '../../styles'
 import ToggleEye from './ToggleEye'
 import { TouchableOpacity } from 'react-native-gesture-handler'
@@ -90,22 +90,25 @@ const LoginScreen = ({}) => {
           </Item>
 
           <FlatButton
+            loading={login_is_loading}
             style={styles.submit}
             title={t('login')}
             onPress={() => onLogin(email, password)}
             disabled={!inputsValid}
           />
         </Form>
-      </KeyboardAwareScrollView>
 
-      <TouchableOpacity style={[styles.register]}>
-        <Text style={[styles.newUserText, global_styles.textPrimary]}>
-          {t('have_no_account_yet') + '  '}
-        </Text>
-        <Text style={[styles.registerText, global_styles.textPrimary]}>
-          {t('register')}
-        </Text>
-      </TouchableOpacity>
+        <View style={styles.registerContainer}>
+          <TouchableOpacity style={[styles.register]}>
+            <Text style={[styles.newUserText, global_styles.textPrimary]}>
+              {t('have_no_account_yet') + '  '}
+            </Text>
+            <Text style={[styles.registerText, global_styles.textPrimary]}>
+              {t('register')}
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </KeyboardAwareScrollView>
     </IntroContainer>
   )
 }

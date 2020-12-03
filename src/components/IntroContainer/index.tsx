@@ -4,11 +4,6 @@ import ImageBgZero from '../../assets/images/banner_top.png'
 import { scale } from '../../styles'
 
 const styles = StyleSheet.create({
-  vector_red: {
-    position: 'absolute',
-    width: '100%',
-    top: scale(3.7),
-  },
   icon: {
     position: 'absolute',
     width: 119.37,
@@ -20,7 +15,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     width: '100%',
-    height: 395,
+    height: '45%',
   },
   container: {
     flex: 1,
@@ -31,7 +26,7 @@ const styles = StyleSheet.create({
 
 const IntroContainer = ({ children }: any = {}) => (
   <View style={styles.container}>
-    <Image source={ImageBgZero} style={styles.bg} />
+    <Image source={ImageBgZero} style={styles.bg} resizeMode="stretch" />
     <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
   </View>
 )

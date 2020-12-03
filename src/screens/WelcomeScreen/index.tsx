@@ -4,6 +4,7 @@ import FlatButton from '../../components/FlatButton'
 import IntroContainer from '../../components/IntroContainer'
 import global_styles, { scale } from '../../styles'
 import { useNavigation } from '@react-navigation/native'
+import { useTranslation } from 'react-i18next'
 
 const styles = StyleSheet.create({
   container: {
@@ -19,13 +20,14 @@ const styles = StyleSheet.create({
 })
 const WelcomeScreen = ({}) => {
   const navigation = useNavigation()
+  const { t } = useTranslation()
   return (
     <IntroContainer>
       <View style={styles.container}>
-        <Text style={global_styles.title}>Bienvenido!</Text>
+        <Text style={global_styles.title}>{t('welcome')}!</Text>
         <View style={styles.buttonsContainer}>
           <FlatButton
-            title="Ingresar"
+            title={'Ingresar'}
             onPress={() => navigation.navigate('Login')}
           />
           <FlatButton title="Quiero registrarme" light />
