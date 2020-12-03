@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  SafeAreaView,
   StyleSheet,
   TouchableOpacity,
   Image,
@@ -58,6 +57,7 @@ const styles = StyleSheet.create({
     borderRadius: scale(0.1),
     width: scale(1.257),
     height: scale(1.089),
+    marginTop: Platform.select({ ios: 0, android: -5 }),
     //backgroundColor: 'red',
   },
   shoppingCart: {
