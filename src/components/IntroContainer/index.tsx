@@ -1,8 +1,6 @@
 import React from 'react'
 import { Image, StyleSheet, SafeAreaView, View } from 'react-native'
-import ImageAppIcon from '../../assets/images/app_icon.png'
-import ImageBgZero from '../../assets/images/bg_zero.png'
-import ImageVector from '../../assets/images/vector_red.png'
+import ImageBgZero from '../../assets/images/banner_top.png'
 import { scale } from '../../styles'
 
 const styles = StyleSheet.create({
@@ -34,12 +32,6 @@ const styles = StyleSheet.create({
 const IntroContainer = ({ children }: any = {}) => (
   <View style={styles.container}>
     <Image source={ImageBgZero} style={styles.bg} />
-    <Image source={ImageAppIcon} resizeMode="contain" style={styles.icon} />
-    <Image
-      source={ImageVector}
-      resizeMode="contain"
-      style={styles.vector_red}
-    />
     <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
   </View>
 )
