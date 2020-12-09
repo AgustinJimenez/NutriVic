@@ -21,7 +21,7 @@ const NavigationProvider = (props: any) => {
   let auth_token = useSelector((state) => datasetSelector(state, 'auth_token'))
   if (!auth_token)
     return (
-      <Stack.Navigator initialRouteName="AuthLoading" headerMode="none">
+      <Stack.Navigator headerMode="none">
         <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Login" component={LoginScreen} />
       </Stack.Navigator>
