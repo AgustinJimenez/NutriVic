@@ -2,15 +2,16 @@ import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Image } from 'react-native'
 import MainContainer from '../../components/MainContainer'
 import { useTranslation } from 'react-i18next'
-import { colors, scale } from '../../styles'
+import { colors, scale, deviceHeight } from '../../styles'
 import ImagePersonOk from '../../assets/images/person_ok.png'
 import { useNavigation } from '@react-navigation/native'
 import { CommonActions } from '@react-navigation/native'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const styles = StyleSheet.create({
   container: {},
   title: {
-    marginTop: scale(1.5),
+    marginTop: scale(0.3),
     marginBottom: scale(1.2),
     fontWeight: '700',
     fontSize: scale(0.92),
@@ -39,8 +40,11 @@ const styles = StyleSheet.create({
     color: colors.primary(),
     textAlign: 'left',
   },
+  buttonPersonContainer: {
+    flexDirection: 'row',
+  },
   buttonsContainer: {
-    marginLeft: scale(0.8),
+    paddingLeft: scale(0.8),
   },
   showOtherProductsButtonContainer: {
     position: 'absolute',
@@ -58,12 +62,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   personOk: {
-    position: 'absolute',
-    right: scale(0.3),
-    bottom: scale(2.5),
-    height: scale(8.6),
-    width: scale(4.72),
+    flex: 1,
+    height: deviceHeight * 0.5,
+    top: scale(1),
   },
+  scrollContainer: { paddingBottom: scale(3) },
 })
 
 const BudgetConfirmScreen = ({}) => {
@@ -71,37 +74,46 @@ const BudgetConfirmScreen = ({}) => {
   const navigation = useNavigation()
   return (
     <MainContainer>
-      <Text style={styles.title}>{t('tanks_for_your_order')}</Text>
-      <Text style={styles.adviser_text}>
-        {t('a_adviser_will_contact_you_shortly_for_confirmation') + ':'}
-      </Text>
-      <View style={styles.buttonsContainer}>
-        {[
-          {
-            label: t('payment_method'),
-            onPress: () => {},
-            style: { width: scale(3.5) },
-          },
-          {
-            label: t('shipping_logistic'),
-            onPress: () => {},
-            style: { width: scale(4) },
-          },
-          {
-            label: t('invoice_data'),
-            onPress: () => {},
-            style: { width: scale(3.7) },
-          },
-        ].map(({ label, onPress, style }, key) => (
-          <TouchableOpacity
-            onPress={onPress}
-            key={key}
-            style={[styles.button, style]}
-          >
-            <Text style={styles.buttonText}>{label}</Text>
-          </TouchableOpacity>
-        ))}
-      </View>
+      <KeyboardAwareScrollView contentContainerStyle={styles.scrollContainer}>
+        <Text style={styles.title}>{t('tanks_for_your_order')}</Text>
+        <Text style={styles.adviser_text}>
+          {t('a_adviser_will_contact_you_shortly_for_confirmation') + ':'}
+        </Text>
+        <View style={styles.buttonPersonContainer}>
+          <View style={styles.buttonsContainer}>
+            {[
+              {
+                label: t('payment_method'),
+                onPress: () => {},
+                style: { width: scale(3.5) },
+              },
+              {
+                label: t('shipping_logistic'),
+                onPress: () => {},
+                style: { width: scale(4) },
+              },
+              {
+                label: t('invoice_data'),
+                onPress: () => {},
+                style: { width: scale(3.7) },
+              },
+            ].map(({ label, onPress, style }, key) => (
+              <TouchableOpacity
+                onPress={onPress}
+                key={key}
+                style={[styles.button, style]}
+              >
+                <Text style={styles.buttonText}>{label}</Text>
+              </TouchableOpacity>
+            ))}
+          </View>
+          <Image
+            style={styles.personOk}
+            source={ImagePersonOk}
+            resizeMode="contain"
+          />
+        </View>
+      </KeyboardAwareScrollView>
       <TouchableOpacity
         style={styles.showOtherProductsButtonContainer}
         onPress={() => {
@@ -117,11 +129,6 @@ const BudgetConfirmScreen = ({}) => {
           {t('show_other_products')}
         </Text>
       </TouchableOpacity>
-      <Image
-        style={styles.personOk}
-        source={ImagePersonOk}
-        resizeMode="contain"
-      />
     </MainContainer>
   )
 }

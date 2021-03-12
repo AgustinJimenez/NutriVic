@@ -2,41 +2,15 @@
   "lang": "es",
   "login_email": "",
   "auth_token": "",
+  "profile": {},
   "selected_product_id": null,
   "product_selection_panel_open": false,
   "product_count_modal_is_visible": false,
-  "products": {
-    "2": {
-      "id": 2,
-      "weight": true,
-      "title": "Tbone especial",
-      "subtitle": "Ideal para la parrilla a fuego lento",
-      "price": 33000,
-      "image": "http://lorempixel.com/500/300/food/"
-    },
-    "3": {
-      "id": 3,
-      "weight": false,
-      "title": "Costilla de Cerdo",
-      "subtitle": "Ideal para la parrilla a fuego lento",
-      "price": 28000,
-      "image": "http://lorempixel.com/450/250/food/"
-    },
-    "4": {
-      "id": 4,
-      "weight": true,
-      "title": "Costilla de Vaca",
-      "subtitle": "Ideal para la parrilla a fuego lento",
-      "price": 28000,
-      "image": "http://lorempixel.com/400/200/food/"
-    },
-    "5": {
-      "id": 5,
-      "weight": true,
-      "title": "Costilla de Cabra",
-      "subtitle": "Ideal para la parrilla a fuego lento",
-      "price": 28000,
-      "image": "http://lorempixel.com/600/350/food/"
-    }
-  }
+  "categories": {},
+  "sectors": {},
+  "species": {},
+  "products": {},
+  "product_lines": {},
+  "request_budget_products": [],
+  "sending_budget_request": false
 }

@@ -2,32 +2,31 @@ import React from 'react'
 import { Image, StyleSheet, SafeAreaView, View } from 'react-native'
 import ImageBgZero from '../../assets/images/banner_top.png'
 import { scale } from '../../styles'
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 const styles = StyleSheet.create({
-  icon: {
-    position: 'absolute',
-    width: 119.37,
-    height: 159,
-    left: 121,
-    top: scale(2.3),
-  },
-  bg: {
-    position: 'absolute',
-    top: 0,
-    width: '100%',
-    height: '45%',
-  },
   container: {
-    flex: 1,
     backgroundColor: 'white',
+    flex: 1,
   },
-  safeArea: { flex: 1 },
+  image: {
+    width: '100%',
+    height: scale(10),
+  },
+  safeArea: {
+    flex: 1,
+    paddingBottom: -scale(5),
+  },
+  emptySpace: { height: scale(4) },
 })
 
 const IntroContainer = ({ children }: any = {}) => (
-  <View style={styles.container}>
-    <Image source={ImageBgZero} style={styles.bg} resizeMode="stretch" />
-    <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
-  </View>
+  <KeyboardAwareScrollView style={styles.container} bounces={false}>
+    <Image source={ImageBgZero} style={styles.image} resizeMode="cover" />
+    <SafeAreaView style={styles.safeArea}>
+      {children}
+      <View style={styles.emptySpace} />
+    </SafeAreaView>
+  </KeyboardAwareScrollView>
 )
 export default IntroContainer

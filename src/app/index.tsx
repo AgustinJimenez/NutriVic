@@ -15,6 +15,8 @@ import { NavigationContainer } from '@react-navigation/native'
 //import { disableYellowBox, ignoreWarnings } from '../../env.json'
 import GlobalFont from 'react-native-global-font'
 import LoadingScreen from '../screens/LoadingScreen'
+import AxiosProvider from './AxiosProvider'
+
 LogBox.ignoreAllLogs()
 
 const App = () => {
@@ -61,11 +63,13 @@ const App = () => {
         }
       >
         <PersistGate loading={<LoadingScreen />} persistor={persistor}>
-          <Root>
-            <StatusBar barStyle="light-content" />
-            <NavigationProvider />
-            <NetStatusChecker />
-          </Root>
+          <AxiosProvider>
+            <Root>
+              <StatusBar barStyle="light-content" />
+              <NavigationProvider />
+              <NetStatusChecker />
+            </Root>
+          </AxiosProvider>
         </PersistGate>
       </NavigationContainer>
     </ReduxProvider>

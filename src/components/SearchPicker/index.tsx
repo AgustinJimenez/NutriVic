@@ -16,7 +16,7 @@ import {
 import SearchBar from 'react-native-search-bar'
 import Modal from 'react-native-modal'
 import { useTranslation } from 'react-i18next'
-import styles, { colo } from './styles'
+import styles from './styles'
 
 const SearchPicker = ({
   placeholder,

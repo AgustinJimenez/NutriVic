@@ -1,7 +1,9 @@
 import { StyleSheet, Dimensions } from 'react-native'
 import palette from './palette'
 //const deviceHeight = Dimensions.get('window').height
-const deviceWidth = Dimensions.get('window').width
+export const deviceWidth = Dimensions.get('window').width
+export const deviceHeight = Dimensions.get('window').height
+
 export const scale = (number = 1) => (number / 10) * deviceWidth
 const global_styles = StyleSheet.create({
   bold: { fontWeight: 'bold' },
@@ -26,6 +28,9 @@ const global_styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     fontSize: 28.43,
+    textShadowColor: 'white',
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 1,
   },
 })
 

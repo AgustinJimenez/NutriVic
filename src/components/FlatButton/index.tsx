@@ -39,7 +39,7 @@ const FlatButton = ({
     children = (
       <>
         {loading ? (
-          <ActivityIndicator />
+          <ActivityIndicator size="small" color="white" />
         ) : (
           <Text
             style={[

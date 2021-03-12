@@ -1,38 +1,43 @@
 import React from 'react'
-import { TouchableOpacity, Image, Text, StyleSheet } from 'react-native'
+import { TouchableOpacity, StyleSheet, Text } from 'react-native'
 import { colors, scale } from '../../styles'
+import { SvgCssUri } from 'react-native-svg'
 
 const styles = StyleSheet.create({
   container: {
-    width: scale(2),
-    height: scale(2.2),
-    paddingVertical: scale(0.2),
+    width: scale(1.8),
     paddingHorizontal: scale(0.2),
     backgroundColor: colors.light(0.48),
-    marginHorizontal: scale(0.15),
+    marginHorizontal: scale(0.3),
     alignItems: 'center',
     borderRadius: scale(0.2),
+    marginBottom: scale(0.5),
+    // backgroundColor: 'red',
   },
   title: {
     color: colors.primary(),
     fontWeight: '700',
-    fontSize: 12,
+    fontSize: scale(0.3),
     //fontSize: scale(0.34),
     marginVertical: scale(0.15),
     textAlign: 'center',
   },
-  image: { width: 55, height: 51 },
+  /* image: {
+    //width: scale(2.09),
+  }, */
+  image: { width: scale(1), height: scale(1.3) },
 })
 
 const CategoryButton = ({
   title = '',
-  img_source,
+  img_source = '',
   onPress = () => {},
   titleStyles = {},
 }: any) => {
+  // /console.log('CategoryButton ===> ', img_source)
   return (
     <TouchableOpacity onPress={onPress} style={styles.container}>
-      <Image source={img_source} resizeMode="contain" style={styles.image} />
+      <SvgCssUri uri={img_source} style={styles.image} />
       <Text style={[styles.title, titleStyles]}>{title}</Text>
     </TouchableOpacity>
   )

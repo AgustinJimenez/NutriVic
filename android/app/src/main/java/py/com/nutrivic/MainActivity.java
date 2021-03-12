@@ -1,4 +1,4 @@
-package com.app;
+package py.com.nutrivic;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

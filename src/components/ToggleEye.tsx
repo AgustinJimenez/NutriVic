@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet } from 'react-native'
 import { Icon } from 'native-base'
-import { scale, colors } from '../../styles'
+import { colors, scale } from '../styles'
 
 const styles = StyleSheet.create({
   eye: {

@@ -15,6 +15,10 @@
     "en": "Data not found",
     "es": "Dato no encontrado"
   },
+  "invalid_credentials": {
+    "en": "Invalid credentials",
+    "es": "Credenciales invalidas"
+  },
   "select": {
     "en": "Select",
     "es": "Seleccionar"
@@ -42,6 +46,14 @@
   "sure_want_delete_record": {
     "en": "¿Are you sure that you want to delete the record?",
     "es": "¿Está seguro de que desea eliminar el registro?"
+  },
+  "sure_want_to_logout": {
+    "en": "¿Are you sure that you want to logout?",
+    "es": "¿Está seguro de que desea desloguearse?"
+  },
+  "sure_want_to_request_budget": {
+    "en": "¿Are you sure that you want to send this request?",
+    "es": "¿Está seguro de que desea solicitar el presupuesto?"
   },
   "accept": {
     "en": "Accept",
@@ -95,6 +107,10 @@
     "en": "Notice",
     "es": "Aviso"
   },
+  "attention": {
+    "en": "Attention",
+    "es": "Atención"
+  },
   "username": {
     "en": "Username",
     "es": "Nombre de Usuario"
@@ -103,6 +119,22 @@
     "en": "Email",
     "es": "Email"
   },
+  "at_least_6_characters": {
+    "en": "At least 6 characters",
+    "es": "Al menos 6 caracteres"
+  },
+  "end_session": {
+    "en": "End session",
+    "es": "Cerrar sesión"
+  },
+  "exit": {
+    "en": "Exit",
+    "es": "Salir"
+  },
+  "user_created_correctly": {
+    "en": "User created correctly",
+    "es": "Usuario creado correctamente"
+  },
   "email_or_phone": {
     "en": "Email or phone",
     "es": "Email o telefono"
@@ -110,6 +142,10 @@
   "password": {
     "en": "Password",
     "es": "Contraseña"
+  },
+  "repeat_password": {
+    "en": "Repeat password",
+    "es": "Repita contraseña"
   },
   "login": {
     "en": "Login",
@@ -122,6 +158,10 @@
   "have_no_account_yet": {
     "en": "Have no account yet",
     "es": "Aun no tengo cuenta"
+  },
+  "have_an_account_already": {
+    "en": "Have an account already?",
+    "es": "Ya tienes una cuenta?"
   },
   "presentation": {
     "en": "Presentation",
@@ -258,5 +298,25 @@
   "show_other_products": {
     "en": "Show other products",
     "es": "Ver otros productos"
+  },
+  "hi": {
+    "en": "Hi",
+    "es": "Hola"
+  },
+  "line": {
+    "en": "Line",
+    "es": "Linea"
+  },
+  "must_login_to_request_budget": {
+    "en": "You must login or register to request a quotation",
+    "es": "Debe estar logueado para pedir un presupuesto"
+  },
+  "request_sended_correctly": {
+    "en": "Request sended correctly",
+    "es": "Solicitud enviada correctamente"
+  },
+  "unexpected_error": {
+    "en": "Unexpected error",
+    "es": "Error inesperado"
   }
 }

@@ -1,9 +1,9 @@
-import { useEffect, Props } from 'react'
+import { useEffect } from 'react'
 import NetInfo from '@react-native-community/netinfo'
 import { updatNetworkStatusAction } from '../sagas/actions'
 import { useDispatch } from 'react-redux'
 
-const NetStatusChecker = (props: any) => {
+const NetStatusChecker = ({}) => {
   //console.log('NetStatusChecker ===> ', { props })
   const dispatch = useDispatch()
   useEffect(() => {

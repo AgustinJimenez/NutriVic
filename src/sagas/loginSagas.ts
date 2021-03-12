@@ -1,36 +1,45 @@
-import { call, put /* , call  */ } from 'redux-saga/effects'
+import { call, put } from 'redux-saga/effects'
 import { LOGIN_SAGA } from './constants'
-//import { setAuthDatasetAction, setAppointmentsDatasetAction, clearReasonsReducerAction, clearClientsReducerAction } from '../actions'
 import { takeLatest } from 'redux-saga/effects'
 import showToast from '../utils/showToast'
-//import { loginRoute, userInfoRoute } from '../api/routes'
-//import request from './request'
 import { setDatasetToReducer } from '../redux/actions'
-import sleep from '../utils/sleep'
+import { loginRoute, profileRoute } from '../api/routes'
+import { UNAUTHORIZED } from 'http-status-codes'
+import request from './utils/request'
 import * as RootNavigation from '../app/NavigationProvider/service'
+import { CommonActions } from '@react-navigation/native'
 
 export function* login({ email = '', password = '' }) {
-  /* 
-    var { data, error, message } = yield call(request, {
-        url: loginRoute,
-        params: { name, password },
-        method: 'POST',
-        //debug: true,
-    })
-    if (error) {
-        yield showToast(message, { type: 'danger' })
-        onFinishCallback()
-        return
-    }
-    onFinishCallback()
- */
-
   yield put(setDatasetToReducer(true, 'login_is_loading'))
-  yield call(sleep, 1000)
+  var { error, data, response } = yield call(request, {
+    url: loginRoute,
+    method: 'POST',
+    data: {
+      email,
+      password,
+    },
+    //debug: true,
+  })
+
+  if (!!error && response.status === UNAUTHORIZED) {
+    yield showToast('invalid_credentials', { type: 'danger' })
+    yield put(setDatasetToReducer(false, 'login_is_loading'))
+    return
+  }
+
+  yield put(setDatasetToReducer(data.access_token, 'auth_token'))
+  var { error, data, response } = yield call(request, {
+    url: profileRoute,
+    //debug: true,
+  })
+  if (!error) yield put(setDatasetToReducer(data, 'profile'))
+
+  yield showToast('welcome', { type: 'success' })
   yield put(setDatasetToReducer(false, 'login_is_loading'))
-  console.log('LOGIN SAGA !!!!', { email, password })
-  yield showToast('Login Success', { type: 'success' })
-  yield put(setDatasetToReducer('ABC123', 'auth_token'))
+
+  RootNavigation.dispatch(
+    CommonActions.reset({ index: 0, routes: [{ name: 'Home' }] })
+  )
 }
 
 export default function* loginSagas() {

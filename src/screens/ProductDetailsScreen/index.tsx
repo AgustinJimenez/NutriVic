@@ -1,136 +1,93 @@
 import React from 'react'
-import { View, Image, Text, StyleSheet } from 'react-native'
+import { View, Image, Text } from 'react-native'
 import MainContainer from '../../components/MainContainer'
-import ImageProduct from '../../assets/images/product_1.png'
-import { colors, scale } from '../../styles'
 import { useTranslation } from 'react-i18next'
 import FlatButton from '../../components/FlatButton'
-import ProductIcon from '../../components/ProductIcon'
-import { useNavigation } from '@react-navigation/native'
+import ProductSpecies from '../../components/ProductSpecies'
+import { useNavigation, useRoute } from '@react-navigation/native'
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
+import { useDispatch, useSelector } from 'react-redux'
+import { datasetSelector } from '../../redux/selectors'
+import getImageUriFromEntity from '../../utils/getImageUriFromEntity'
+import styles from './styles'
+import { setDatasetToReducer } from '../../redux/actions'
 
-const defaultProduct = {
-  name: 'Antibrucelica Rosenbusch',
-  indication: `Para la prevención de la Queratoconjuntivitis Infecciosa bovina y las distintas manifestaciones del Herpesvirus bovino tipo I.`,
-  presentation:
-    'Frascos-ampolla de 60 y 240 ml (20 y 80 dosis respectivamente).',
-  dose_application:
-    '3 ml por vía I.M. En la tabla del cuello. Vacunar con 2 dosis separadas entre sí por 30 días, después del destete o antes de la época de mayor incidencia de la enfermedad. Revacunar anualmente con 1 dosis. Venta Bajo Receta.',
-  composition:
-    ' Cultivo de Moraxella bovis y suspensión de virus de la Rinotraqueitis Infecciosa bovina (Herpes virus bovino I), inactivados y adsorbidos en hidróxido de aluminio con vitaminas A y E, con adyuvante oleoso',
-  type: 'Queratoconjuntivitis',
-  image: ImageProduct,
-}
-
-const styles = StyleSheet.create({
-  container: {
-    paddingBottom: scale(4),
-  },
-  firstPartContainer: { flexDirection: 'row' },
-  image: {
-    width: scale(4.598),
-    height: scale(6.27),
-  },
-  firstPartInfo: {},
-  name: {
-    marginTop: scale(0.46),
-    width: scale(4.137),
-    fontWeight: '700',
-    fontSize: scale(0.588),
-    color: colors.primary(),
-    marginBottom: scale(0.242),
-  },
-  inticationTitle: {
-    color: colors.primary(),
-    fontSize: scale(0.316),
-    fontWeight: '700',
-    lineHeight: scale(0.429),
-  },
-  indicationContent: {
-    color: colors.primary(),
-    fontSize: scale(0.242),
-    fontWeight: '400',
-    width: scale(4.566),
-    lineHeight: scale(0.429),
-  },
-  secondPartContainer: {},
-  infoContainer: {
-    paddingLeft: scale(0.63),
-  },
-  lightBg: {
-    backgroundColor: colors.light(0.6),
-  },
-  infoTitle: {
-    color: colors.primary(),
-    fontWeight: '700',
-    fontSize: scale(0.46),
-    marginTop: scale(0.242),
-  },
-  infoContent: {
-    color: colors.primary(),
-    fontWeight: '400',
-    fontSize: scale(0.27),
-    marginBottom: scale(0.49),
-    lineHeight: scale(0.36),
-    width: scale(8.044),
-  },
-  buttonContainer: {
-    position: 'absolute',
-    bottom: scale(0.4),
-    right: scale(1),
-    left: scale(1),
-    alignItems: 'center',
-  },
-  categoriesIconsContainers: { flexDirection: 'row' },
-  categoryIcon: {
-    marginRight: scale(0.049),
-  },
-})
-
-const ProductDetailsScreen = ({ product = defaultProduct }) => {
+const ProductDetailsScreen = ({}) => {
   const navigation = useNavigation()
+  const dispatch = useDispatch()
   const { t } = useTranslation()
+  const route: any = useRoute()
+  const { id } = route.params
+  const product = useSelector(
+    (state) =>
+      datasetSelector(state, 'products', { id, single_format: true }) || {}
+  )
+  const request_budget_products = useSelector((state) =>
+    datasetSelector(state, 'request_budget_products')
+  )
+
+  const addProductToBudget = React.useCallback(() => {
+    let productAlreadyInList = false
+    let updated_request_budget = request_budget_products.map((item: any) => {
+      if (item['product_id'] === id) {
+        productAlreadyInList = true
+        item['quantity']++
+      }
+
+      return item
+    })
+
+    if (!productAlreadyInList)
+      updated_request_budget.push({ product_id: id, quantity: 1 })
+
+    dispatch(
+      setDatasetToReducer(
+        updated_request_budget.all(),
+        'request_budget_products'
+      )
+    )
+
+    navigation.navigate('MyBudget')
+  }, [request_budget_products])
+
   return (
     <MainContainer>
       <KeyboardAwareScrollView contentContainerStyle={styles.container}>
         <View style={styles.firstPartContainer}>
-          <Image
-            source={ImageProduct}
-            resizeMode="cover"
-            style={styles.image}
-          />
+          <View style={styles.imageContainer}>
+            <Image
+              source={{ uri: getImageUriFromEntity(product) }}
+              resizeMode="contain"
+              style={styles.image}
+            />
+          </View>
           <View style={styles.firstPartInfo}>
-            <Text style={styles.name}>{product.name}</Text>
+            <Text style={styles.name}>{product?.name}</Text>
             <Text style={styles.inticationTitle}>{t('indication')}</Text>
-            <Text style={styles.indicationContent}>{product.indication}</Text>
+            <Text style={styles.indicationContent}>{product.instructions}</Text>
             <View style={styles.categoriesIconsContainers}>
-              {[
-                {
-                  code: 'vaccines',
-                },
-                {
-                  code: 'cows',
-                },
-              ].map(({ code }, key) => (
-                <ProductIcon
-                  code={code}
-                  bordered
-                  key={key}
-                  style={styles.categoryIcon}
-                />
-              ))}
+              {product['product_species'].map(
+                (product_species: any, key: number) => (
+                  <ProductSpecies
+                    species_id={product_species['species_id']}
+                    bordered
+                    key={key}
+                    style={styles.categoryIcon}
+                  />
+                )
+              )}
             </View>
           </View>
         </View>
         <View style={styles.secondPartContainer}>
           <View style={[styles.infoContainer, styles.lightBg]}>
             <Text style={styles.infoTitle}>{t('presentation')}</Text>
-            <Text style={styles.infoContent}>{product.presentation}</Text>
+            <Text style={styles.infoContent}>{product.display}</Text>
           </View>
 
           <View style={styles.infoContainer}>
             <Text style={styles.infoTitle}>{t('dose_and_application')}</Text>
-            <Text style={styles.infoContent}>{product.dose_application}</Text>
+            <Text style={styles.infoContent}>{product.dosage}</Text>
           </View>
 
           <View style={[styles.infoContainer, styles.lightBg]}>
@@ -145,10 +102,7 @@ const ProductDetailsScreen = ({ product = defaultProduct }) => {
         </View>
       </KeyboardAwareScrollView>
       <View style={styles.buttonContainer}>
-        <FlatButton
-          title={t('add_to_budget')}
-          onPress={() => navigation.navigate('MyBudget')}
-        />
+        <FlatButton title={t('add_to_budget')} onPress={addProductToBudget} />
       </View>
     </MainContainer>
   )

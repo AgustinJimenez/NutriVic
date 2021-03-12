@@ -18,7 +18,9 @@ import {
   SET_NOTIFICTION_SAGA,
   NOTIFICATION_WAS_TAPPED_SAGA,
   LOGIN_SAGA,
-  CALLBACK_VOID_SAGA,
+  REGISTER_SAGA,
+  HOME_SAGA,
+  REQUEST_BUDGET_SAGA,
 } from './constants'
 
 export const actionAuthSaga = (params: any, onFinishCallback: Function) => ({
@@ -71,7 +73,7 @@ export const setAuthDatasetAction = (data: any) => ({
   dataset_name: 'auth_token',
   data,
 })
-export const logoutAction = () => ({
+export const logoutSagaAction = () => ({
   type: LOGOUT_SAGA,
 })
 export const setLangReducer = (lang_id: string) => ({
@@ -142,4 +144,22 @@ export const logAction = (email: string, password: string) => ({
   type: LOGIN_SAGA,
   email,
   password,
+})
+export const registerSagaAction = (
+  name: string,
+  email: string,
+  password: string,
+  password_confirmation: string
+) => ({
+  type: REGISTER_SAGA,
+  name,
+  email,
+  password,
+  password_confirmation,
+})
+export const homeSagaAction = () => ({
+  type: HOME_SAGA,
+})
+export const requestBudgetSagaAction = () => ({
+  type: REQUEST_BUDGET_SAGA,
 })
